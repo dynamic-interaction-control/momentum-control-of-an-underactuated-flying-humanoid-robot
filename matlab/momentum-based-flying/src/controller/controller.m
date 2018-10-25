@@ -90,7 +90,7 @@ function [hessianMatrixQP,gVectorQP,constraintMatA,lowerBoundQPMatA,upperBoundQP
         BTilde          = [A, Lambda_s + Config.gains.com.KP*JH_s];
         
         deltaTilde      = (Lambda_b + Config.gains.com.KP *JH_b)*nu(1:6) -HdDDot ...
-                          - Config.gains.com.KP * HdDot + Config.gains.com.KD*HTildeDot + Config.gains.com.KI*intHTilde;
+                          - Config.gains.com.KP * Hd + Config.gains.com.KD*HTildeDot + Config.gains.com.KI*intHTilde;
                                                    
     end
     
